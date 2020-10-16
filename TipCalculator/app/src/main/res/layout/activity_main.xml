@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/label_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="35dp"
+        android:minWidth="72dp"
+        android:padding="5dp"
+        android:text="@string/label_amount_bill"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGray"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:padding="5dp"
+        android:text="@string/label_tip_percent"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_bill" />
+
+    <EditText
+        android:id="@+id/txt_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/amount_bill_hint"
+        android:layout_marginTop="50dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_bill"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/amount_tip_percent_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bill" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="300dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="25dp"
+        android:background="#3498DB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tip" />
+
+    <TextView
+        android:id="@+id/label_atip"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/lightGray"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="35dp"
+        android:textSize="20dp"
+        android:minWidth="72dp"
+        android:padding="5dp"
+        android:text="@string/label_amount_tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+    <TextView
+        android:id="@+id/label_Atip"
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/lightGreen"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/label_atip"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/label_total"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightGray"
+        android:padding="5dp"
+        android:minWidth="72dp"
+        android:text="@string/label_total"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_atip" />
+
+    <TextView
+        android:id="@+id/label_Atotal"
+        android:layout_width="225dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightGreen"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        android:layout_toRightOf="@id/label_total"
+        app:layout_constraintStart_toEndOf="@+id/label_total"
+        app:layout_constraintTop_toBottomOf="@id/label_Atip" />
+
+    <Button
+        android:id="@+id/btn_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="55dp"
+        android:text="CALCULATE"
+        android:textSize="20dp"
+        android:textColor="#FFF"
+        android:background="@color/darkGreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_total" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:text="RESET"
+        android:textSize="20dp"
+        android:textColor="#FFF"
+        android:background="#E74C3C"
+        app:layout_constraintStart_toEndOf="@+id/btn_cal"
+        app:layout_constraintTop_toBottomOf="@+id/label_Atotal" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
